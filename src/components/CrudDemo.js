@@ -122,7 +122,7 @@ const CrudDemo = () => {
                      // update the state = reload the useEffect
                     setReload(!reload);
                 }else {
-                    // show error message
+                    // displays an error message
                     setMessage({value: 'Error:'+ res.status, type: 'danger'});
                 }
             });
@@ -163,8 +163,10 @@ const CrudDemo = () => {
 
     return (
         <div className="container">
-            {message && <h3 className={'alert alert-secondary' + message.type}>{message.value}</h3> }
+            {message && <h6 className={'alert alert-secondary' + message.type}>{message.value}</h6> }
+            <h3>Join us and add yourself</h3>
             <Form />
+            <h3>Person list</h3>
             <Table />
         </div>
     );

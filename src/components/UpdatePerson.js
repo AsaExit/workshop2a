@@ -9,7 +9,7 @@ import { useForm } from 'react-hook-form';
 const UpdatePerson = () => {
 // state
     const params = useParams();
-    const [person, setPerson] = useState({id: 0, firstName: '', lastName: '',email: '', title: ''});
+    const [person, setPerson] = useState({id: 0, firstName: '', lastName: '', email: '', title: ''});
     const [message, setMessage] = useState({value: '', type: ''});
     const history = useHistory();
     const [reload, setReload] = useState(false);
@@ -42,18 +42,16 @@ const UpdatePerson = () => {
             const hookService = new HookService();
             hookService.updatePerson(data).then(res => {
                 if(res.status === 204){
-                    // show message
+                    // Displays message
                     setMessage({value: 'Put for person Id:' + res.data.id , type: 'success'});
                      // update the state = reload the useEffect
                     setReload(!reload);
                 }else {
-                    // show error message
+                    // Dispalys an error message
                     setMessage({value: 'Error:'+ res.status, type: 'danger'});
                 }
             });
 
-            
-                //history.push(`/details/${data.id}`);
             history.push(`/crud/`);
            
         }
@@ -82,7 +80,8 @@ const UpdatePerson = () => {
                     </div>
                     <div className="row mb-3">
                         <div className="col">
-                            <input type="text" className="form-control" {...register("title")} placeholder="Enter Title" />
+                            <input type="text" className="form-control" {...register("title")}placeholder={person.title} />
+                            
                         </div>
                     </div>
                     <button type="submit" className="btn btn-dark">Update</button>

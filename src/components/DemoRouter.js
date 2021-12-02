@@ -34,7 +34,7 @@ const Welcome = () => <b><h3>Welcome Page</h3></b>;
 const Home = () => <b><h3>Home Page</h3></b>;
 const About = () => <b><h3>About Us Page</h3></b>;
 const Person = () => <b><h3>Person Page</h3></b>;
-const NotFound = () =><b><h3>Page Not Found</h3></b>;
+const NotFound = () =><b><h1>404</h1>Page not found or you made a BAD request</b>;
 
 const Header = () => {
 return (
