@@ -3,7 +3,7 @@ import React from 'react';
 const CrudDemo = () => {
   return (
     <div>
-      <h2>CrudDemo</h2>
+      <h6>CRUD</h6>
     </div>
   );
 };
