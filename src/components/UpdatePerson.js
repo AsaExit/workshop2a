@@ -9,7 +9,7 @@ import { useForm } from 'react-hook-form';
 const UpdatePerson = () => {
 // state
     const params = useParams();
-    const [person, setPerson] = useState({id: 0, firstName: '', lastName: '', email: '', title: ''});
+    const [person, setPerson] = useState({id: 0, firstName: '', lastName: '',email: '', title: ''});
     const [message, setMessage] = useState({value: '', type: ''});
     const history = useHistory();
     const [reload, setReload] = useState(false);
@@ -81,7 +81,7 @@ const UpdatePerson = () => {
                     <div className="row mb-3">
                         <div className="col">
                             <input type="text" className="form-control" {...register("title")}placeholder={person.title} />
-                            
+                            {errors.title && <span className="text-danger">Title is Required!</span>}
                         </div>
                     </div>
                     <button type="submit" className="btn btn-dark">Update</button>

@@ -164,9 +164,9 @@ const CrudDemo = () => {
     return (
         <div className="container">
             {message && <h6 className={'alert alert-secondary' + message.type}>{message.value}</h6> }
-            <h3>Join us and add yourself</h3>
+            <h4>Join us and add yourself</h4>
             <Form />
-            <h3>Person list</h3>
+            <h4>Person list</h4>
             <Table />
         </div>
     );
